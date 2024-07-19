@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [InputUser, setInputUser] = useState("bonjour");
+
+  function handleClick() {
+    console.log("btn connecté");
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div>
+      <h1>ToDo List</h1>
+      <div>Form</div>
+      <form>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {" "}
+          Taches à faire :{" "}
+          <input type="text" placeholder="Ecrire à tache à faire" />
+          <button type="submit" onClick={handleClick}>
+            Submit
+          </button>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </form>
     </div>
   );
 }
