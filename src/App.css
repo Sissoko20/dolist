@@ -1,9 +1,10 @@
 
   .containerTodo {
     background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(0, 0, 0) 35%, rgb(0, 0, 0) 100%);
-    height: 110vh;
+    height: 100vh;
     
     width: 100%;
+    box-sizing: border-box;
   }
   
 

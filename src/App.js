@@ -30,8 +30,12 @@ const updateTodo =(index, newValue)=>{
   return (
     
    
-        <Row justify="center" style={{ padding: '20px' }} className="containerTodo">
-          <Col xs={24} sm={20} md={16} lg={12} xl={8}>
+        <Row justify="center" style={{ padding: '20px',
+          
+        }} className="containerTodo">
+          <Col xs={24} sm={20} md={16} lg={12} xl={8} style={{
+            maxWidth:'100%'
+          }}>
        
               <IntroText/>
             <TodoForms addTodo={addTodo}/>
