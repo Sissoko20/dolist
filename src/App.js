@@ -28,9 +28,9 @@ const updateTodo =(index, newValue)=>{
 };
 
   return (
-    <div className="containerTodo">
+    
    
-        <Row justify="center" style={{ padding: '20px' }}>
+        <Row justify="center" style={{ padding: '20px' }} className="containerTodo">
           <Col xs={24} sm={20} md={16} lg={12} xl={8}>
        
               <IntroText/>
@@ -46,7 +46,7 @@ const updateTodo =(index, newValue)=>{
         
           </Col>
         </Row>
-        </div>
+       
   );
 }
 
