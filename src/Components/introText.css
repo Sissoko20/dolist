@@ -1,0 +1,23 @@
+.introText{
+    width: 100%;
+    color: aliceblue;
+}
+
+
+  
+  /* Feuille de style intégrée #10 | http://localhost:3000/ */
+  
+  .introText {
+    /* display: inline; */
+    /* display: inherit; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+    height: 67px;
+    align-content: ;
+    align-items: center;
+    font-weight: bold;
+    font-family: Times;
+  }
+  

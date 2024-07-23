@@ -1,29 +1,52 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
+import TodoForms from "./Components/TodoForm";
+import TodoList from "./Components/TodoList";
+import { Layout, Row, Col } from 'antd'
+import 'antd/dist/reset.css';
+import IntroText from "./Components/IntroText";
 
+const { Header, Content } = Layout;
 function App() {
-  const [InputUser, setInputUser] = useState("bonjour");
+  const [todos, setTodo] = useState([]);
+  
+const addTodo= todo => {
+  setTodo([...todos, todo]);
+ 
+};//fonction permettant d'ajouter la valeur du tableau dans un autre tableau
+const removeTodo = index=>{
+  const newTodos=([...todos]);
+  newTodos.splice(index, 1);
+  setTodo(newTodos);
+}
 
-  function handleClick() {
-    console.log("btn connecté");
-  }
+const updateTodo =(index, newValue)=>{
+  const newTodos= [...todos];
+  newTodos[index].text= newValue;
+  setTodo(newTodos);
+};
 
   return (
-    <div>
-      <h1>ToDo List</h1>
-      <div>Form</div>
-      <form>
-        <p>
-          {" "}
-          Taches à faire :{" "}
-          <input type="text" placeholder="Ecrire à tache à faire" />
-          <button type="submit" onClick={handleClick}>
-            Submit
-          </button>
-        </p>
-      </form>
-    </div>
+    <div className="containerTodo">
+   
+        <Row justify="center" style={{ padding: '20px' }}>
+          <Col xs={24} sm={20} md={16} lg={12} xl={8}>
+       
+              <IntroText/>
+            <TodoForms addTodo={addTodo}/>
+         
+            
+            <TodoList  
+            todos={todos} 
+            removeTodo={removeTodo} 
+            updateTodo={updateTodo}/>
+    
+
+        
+          </Col>
+        </Row>
+        </div>
   );
 }
 
