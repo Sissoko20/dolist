@@ -5,3 +5,15 @@
     justify-content: center;
    
 }
+
+/* Élément | http://localhost:3000/ */
+
+.TodoForm > form:nth-child(1) {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    
+  }
+  
