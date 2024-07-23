@@ -5,7 +5,7 @@
     /*! background: blanchedalmond; */
     color: aliceblue;
     font-weight: bolder;
-    margin: 10px;
+    
     /*! background: blueviolet; */
     width: 100%;
     flex-direction: row;
@@ -42,4 +42,24 @@
    
   }
   
+  
+/* Feuille de style intégrée #8 | http://localhost:3000/ */
+
+.todoItem {
+    /* margin: 14px; */
+    margin: 0px;
+  }
+  
+  /* Feuille de style intégrée #8 | http://localhost:3000/ */
+  
+  .todoItem {
+    /* margin: 14px; */
+   
+  }
+  
+  /* Élément | http://localhost:3000/ */
+  
+  .ant-col > div:nth-child(3) > div:nth-child(1) {
+    margin-right: 10px;
+  }
   
