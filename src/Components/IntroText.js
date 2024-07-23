@@ -4,7 +4,7 @@ function IntroText(){
 
     return (
         <div >
-            <h1 className="introText">Just do It</h1>
+            <h1 className="introText">Enregistrez vos taches</h1>
         </div>
     )
 }
